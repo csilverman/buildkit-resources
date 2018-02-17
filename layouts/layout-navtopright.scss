@@ -1,0 +1,32 @@
+.icon-close {
+	display: none;
+}
+.u-lMain {
+	max-width: $LAYOUT__max-width;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+}
+.u-NavSite {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	@include small() {
+		position: absolute;
+		right: 1em;
+		top: 1em;
+
+		.ac-NavAnchor--top {
+			display: none;
+		}
+		
+		ul {
+			li {
+				display: inline;
+				margin-right: 0.4em;
+			}
+		}
+	}
+}
