@@ -1,0 +1,52 @@
+$LAYOUT__navwidth: 16em;
+
+.icon-close {
+	display: none;
+}
+.u-Main {
+	max-width: $LAYOUT__max-width;
+	margin-left: $LAYOUT__navwidth;
+	padding: 2em;
+}
+.u-Header {
+	position: relative;
+    z-index: 10;
+}
+
+/*	
+	Have js check the height of nav and if it's less than
+	window height, removed fixed positioning
+*/
+
+.no-js {
+	.u-NavSite {
+		position: fixed;
+	}
+}
+.u-NavSite {
+	background: #eee;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+    justify-content: center;
+	left: 0;
+	top: 0;
+	width: $LAYOUT__navwidth;
+	
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	@include small() {
+
+		.ac-NavAnchor--top {
+			display: none;
+		}
+		
+		ul {
+			li {
+			}
+		}
+	}
+}
